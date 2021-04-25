@@ -18,15 +18,18 @@
  */
 package de.fherfurt.jdbc.domains.errors;
 
+import java.io.Serial;
+
 /**
  * <h2>PersonNotFoundException</h2>
  * <p>
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 public class PersonNotFoundException extends Exception {
 
+    @Serial
     private static final long serialVersionUID = -7366814517715710341L;
 
     public PersonNotFoundException(String message) {

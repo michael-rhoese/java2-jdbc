@@ -20,7 +20,7 @@ import org.h2.jdbcx.JdbcDataSource;
  * <h2>H2Controller</h2>
  * <p>
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0 04/25/2021
  */
 @Slf4j

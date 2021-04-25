@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
  * <p>
  * {description}
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 @Slf4j
@@ -75,11 +75,8 @@ public class AddressbookRepository {
 
     private void executeStatement(String sqlStatement) throws StorageError {
 
-        try {
-
-            final Statement statement = H2Controller.getManager().getConnection().createStatement();
+        try(final Statement statement = H2Controller.getManager().getConnection().createStatement()){
             statement.execute(sqlStatement);
-
         } catch (SQLException e) {
             LOGGER.error(e.getMessage());
             throw new StorageError(e.getMessage());

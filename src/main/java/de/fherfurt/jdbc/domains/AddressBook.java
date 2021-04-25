@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
  * <h2>AdressBook</h2>
  * <p>
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 @Slf4j

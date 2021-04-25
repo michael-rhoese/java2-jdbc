@@ -24,7 +24,7 @@ import lombok.Data;
  * <h2>Person</h2>
  * <p>
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 @Data

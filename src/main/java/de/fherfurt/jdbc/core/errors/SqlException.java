@@ -18,16 +18,19 @@
  */
 package de.fherfurt.jdbc.core.errors;
 
+import java.io.Serial;
+
 /**
  * <h2>SqlException</h2>
  * <p>
  * {description}
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 public class SqlException extends RuntimeException {
 
+    @Serial
     private static final long serialVersionUID = -2531075974010600114L;
 
     public SqlException(String message, Throwable cause) {

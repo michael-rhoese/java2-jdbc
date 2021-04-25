@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  */
 public class AddressBookTest {
 
@@ -40,7 +40,7 @@ public class AddressBookTest {
     Person manfredHerold;
 
     @BeforeEach
-    void prepareAddressBook() throws StorageError {
+    void prepareAddressBook() {
         addressbookRepository = new AddressbookRepository();
 
         addressBook = new AddressBook();
@@ -77,9 +77,7 @@ public class AddressBookTest {
     @Test
     void should_throw_person_not_found_exception_with_unknown_person() {
 
-        assertThrows(PersonNotFoundException.class, () -> {
-            addressBook.getContactByLastName("Gates");
-        });
+        assertThrows(PersonNotFoundException.class, () -> addressBook.getContactByLastName("Gates"));
     }
 
     @Test

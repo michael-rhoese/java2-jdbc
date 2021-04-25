@@ -23,7 +23,7 @@ package de.fherfurt.jdbc.storages.errors;
  * <p>
  * {description}
  *
- * @author Michael Rhöse
+ * @author Michael RhÃ¶se
  * @version 0.0.0.0, 04/25/2021
  */
 public class StorageError extends Exception {
