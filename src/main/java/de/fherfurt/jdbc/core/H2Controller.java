@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.Objects;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.h2.jdbcx.JdbcDataSource;
 
@@ -24,7 +25,7 @@ import org.h2.jdbcx.JdbcDataSource;
  * @version 0.0.0.0 04/25/2021
  */
 @Slf4j
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class H2Controller {
 
     private static final String DATABASE_NAME = "addressbook";
@@ -32,6 +33,8 @@ public class H2Controller {
     private static H2Controller instance;
 
     private final JdbcDataSource dataSource;
+
+    private Connection connection;
 
     public static H2Controller getManager() {
         if (Objects.isNull(instance)) {
@@ -55,7 +58,11 @@ public class H2Controller {
 
     public Connection getConnection() {
         try {
-            return dataSource.getConnection();
+            if(Objects.isNull(connection)){
+                connection = dataSource.getConnection();
+            }
+
+            return connection;
         } catch (SQLException ex) {
             if (LOGGER.isErrorEnabled()) {
                 LOGGER.error("Some error occured");

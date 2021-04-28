@@ -30,9 +30,18 @@ import lombok.Data;
 @Data
 public class Person implements Comparable<Person> {
 
+    public static final String TABLE_NAME = "PERSON";
+    public static final String COLUMN_ID = "ID";
+    public static final String COLUMN_LASTNAME = "LASTNAME";
+    public static final String COLUMN_FIRSTNAME = "FIRSTNAME";
+    public static final String COLUMN_MAIL = "MAIL";
+    public static final String COLUMN_ADDRESS = "ADDRESS_ID";
+
+    private Long id;
     private final String firstName;
     private final String lastName;
     private final String eMail;
+    // private Address address;
 
     @Override
     public int compareTo(final Person person) {
